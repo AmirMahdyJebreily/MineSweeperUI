@@ -3,16 +3,41 @@
 @tailwind utilities;
 
 @layer base {
+  /*font-body*/
   @font-face {
-    font-family: 'Arad';
-    src: url(./Arad-VF.ttf) format("truetype"), url(./Arad-VF.woff2) format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
+    font-family: "Arad";
+    src: url(./Arad-VF.ttf) format("truetype"),
+      url(./Arad-VF.woff2) format("woff2");
+    font-weight: 600;
+    font-style: 600;
+  }
+
+  body {
+    @apply bg-orange-50 text-stone-800 w-screen font-body px-2 flex flex-col items-stretch justify-center;
+  }
+  #app {
+    @apply flex flex-col items-center justify-center;
+  }
 }
 
 @layer components {
-  body{
-    @apply bg-orange-50 w-screen font-body
+  .hover-default {
+    @apply hover:bg-black/20;
+  }
+
+  .prespective-border {
+    @apply border-b-8 border-e-4 border-s-2 border;
+  }
+
+  .nav-link {
+    @apply p-2 md:px-4 hover:text-rose-500 gap-2 inline-flex items-center justify-center;
+  }
+
+  .nav-link > span {
+    @apply pt-0.5;
+  }
+
+  .container-body {
+    @apply bg-gray-50 border-zinc-950 p-2 pb-2.5 rounded-3xl flex flex-col items-start justify-center w-6/12 min-w-52 max-w-96;
   }
 }
