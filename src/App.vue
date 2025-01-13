@@ -40,7 +40,7 @@ import { PuzzlePieceIcon, HandRaisedIcon, BanknotesIcon, InformationCircleIcon }
       </Menu>
     </nav>
   </header>
-  <main class="py-4">
+  <main class="py-4 flex-1 h-full relative">
     <RouterView />
   </main>
   <footer>
@@ -50,11 +50,11 @@ import { PuzzlePieceIcon, HandRaisedIcon, BanknotesIcon, InformationCircleIcon }
 
 <style lang="postcss" scoped>
 header {
-  @apply w-full lg:w-10/12 flex items-center justify-between gap-2 bg-gray-50/70 border-2 border-zinc-500 rounded-b-[2.25rem] sm:rounded-full px-6 py-2 sm:py-0.5 sm:mt-3
+  @apply w-full lg:w-10/12 flex-none flex items-center justify-between gap-2 bg-gray-50/70 border-2 border-zinc-500 rounded-b-[2.25rem] sm:rounded-full px-6 py-2 sm:py-0.5 sm:mt-3
 }
 
 footer {
-  @apply w-full
+  @apply w-full flex-none
 }
 
 nav {

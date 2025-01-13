@@ -8,15 +8,18 @@
     font-family: "Arad";
     src: url(./Arad-VF.ttf) format("truetype"),
       url(./Arad-VF.woff2) format("woff2");
-    font-weight: 600;
-    font-style: 600;
+    font-weight: regular;
+    font-style: regular;
   }
 
+  * {
+    outline: none !important;
+  }
   body {
-    @apply bg-orange-50 text-stone-800 w-screen font-body px-2 flex flex-col items-stretch justify-center;
+    @apply bg-orange-50 text-stone-800 w-screen font-body flex flex-col items-stretch justify-center;
   }
   #app {
-    @apply flex flex-col items-center justify-center;
+    @apply flex flex-col items-center justify-center w-full px-2 relative;
   }
 }
 
@@ -29,8 +32,12 @@
     @apply border-b-8 border-e-4 border-s-2 border;
   }
 
+  .prespective-border-sm {
+    @apply border-b-4 border-e-4 border;
+  }
+
   .nav-link {
-    @apply p-2 md:px-4 hover:text-rose-500 gap-2 inline-flex items-center justify-center;
+    @apply p-2 md:px-4 hover:text-rose-500 gap-2 inline-flex items-center justify-center font-medium;
   }
 
   .nav-link > span {
@@ -39,5 +46,24 @@
 
   .container-body {
     @apply bg-gray-50 border-zinc-950 p-2 pb-2.5 rounded-3xl flex flex-col items-start justify-center w-6/12 min-w-52 max-w-96;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+    
+  }
+
+  .input {
+    @apply focus:bg-amber-50 focus:text-rose-500 focus:border-zinc-950 text-center rounded-3xl flex-1 w-full prespective-border-sm border-zinc-700 min-w-14 text-lg;
+  }
+
+  .dice-image {
+    @apply absolute size-[49px] -top-[8px] left-0 object-cover bg-white opacity-0 m-0
   }
 }
